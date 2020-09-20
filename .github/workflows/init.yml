@@ -8,5 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: fwilhe2/silly-db@main
+      id: db
       with:
         key: France
+    - run: echo ${{ steps.db.outputs.value }}
