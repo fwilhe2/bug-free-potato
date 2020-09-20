@@ -12,6 +12,11 @@ jobs:
       with:
         key: France
     - run: echo ${{ steps.db.outputs.value }}
+    - uses: fwilhe2/silly-db@main
+      with:
+        key: Greece
+        query: write
+        value: Athens
     - run: ls -la
     - run: |
           git config user.name github-actions
